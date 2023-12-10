@@ -1,0 +1,99 @@
+{% extends 'base.html' %} {% block content %}
+<link rel="stylesheet" href="/static/detail.css" />
+<main class="main__cardswindows">
+<section class="moneycounter container_cardswindows">
+  <div class="moneycounter_block">
+    <p>Доход</p>
+    <p>₽ {{wallet.total_income}}</p>
+  </div>
+
+  <div class="moneycounter_block">
+    <p>Расходы</p>
+    <p>₽ {{wallet.total_expense}}</p>
+  </div>
+
+  <div class="moneycounter_block">
+    <p>Итог</p>
+    <p>₽ {{wallet.budget_left}}</p>
+  </div>
+</section>
+
+<section class="counter container_counter">
+  <div class="counter_expenses">
+    <div class="counter_expenses__button-block">
+      <a class="counter_expenses__buttonadd" href="{% url 'create_expense'  %}" ><button>+ Добавить</button></a>
+    </div>
+    <div class="counter_expenses__block-main">
+      {% for i in expenses %}
+      <div class="counter_expenses__block">
+        <div class="counter_expenses__block-elements">
+          <p>{{i.title}} | {{i.category}} |</p>
+          <p>₽ {{i.amount}}</p>
+          
+          <form class="counter_expenses__buttondelete" method="post" action="{% url 'delete_expense' id=i.id %}">
+            {% csrf_token %}
+            <button>
+            <img
+              src="/static/images/ammount/delete.png"
+              alt="delete"
+              style="width: 20px"
+            />
+          </button>
+          </form>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="counter_expenses">
+    <div class="counter_expenses__button-block">
+      <a class="counter_expenses__buttonadd" href="{% url 'create_income' %}" ><button>+ Добавить</button></a>
+    </div>
+    <div class="counter_expenses__block-main">
+      {% for i in income %}
+      <div class="counter_expenses__block">
+        <div class="counter_expenses__block-elements">
+          <p>{{i.title}} | {{i.category}} |</p>
+          <p>₽{{i.amount}}</p>
+          <form class="counter_expenses__buttondelete" method="post" action="{% url 'delete_income' id=i.id %}">
+            {% csrf_token %}
+            <button>
+            <img
+              src="/static/images/ammount/delete.png"
+              alt="delete"
+              style="width: 20px"
+            />
+          </button>
+          </form>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="moneycounter_card">
+    <div class="moneycounter_card-p">
+      <p>{{wallet.name}}</p>
+      <p>Начальный баланс:</p>
+      <p>₽ {{wallet.balance}}</p>
+    </div>
+    <div class="moneycounter_buttonblock">
+      
+      <a class="moneycounter_button" href="/wallets/">Сменить карту</a>
+    </div>
+  </div>
+</section>
+  <section class="graph container">
+    
+      {% if charts %}
+      <img src="data:image/png;base64, {{charts|safe}}" />
+    
+    {% endif %}
+    
+      {% if ex_date %}
+      <img src="data:image/png;base64, {{ex_date|safe}}" />
+      {% endif %}
+    
+  </section>
+</main>
+
+{% endblock %}

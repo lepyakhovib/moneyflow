@@ -1,0 +1,123 @@
+@import url('reset.css');
+.cards_choose {
+  background-color: #121212;
+  padding-bottom: 450px;
+  padding-top: 74px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards__choose-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.cards__choose-info--h1 {
+  padding-bottom: 51px;
+  font-family: "Inter";
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.cards__choose-info--button {
+  display: inline-block;
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  user-select: none;
+  padding: 0.5em 2em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+  font-family: "Inter";
+}
+
+.cards__choose-info--button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.cards__choose-info--button:active {
+  background: white;
+}
+
+.cards__choose--list {
+  display: flex;
+  padding-top: 80px;
+  margin-bottom: 38px;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: row;
+}
+
+.cards__choose-cards {
+  display: flex;
+  background-color: #4d025c;
+  border-radius: 40px;
+  width: 341px;
+  height: 216px;
+  background-repeat: no-repeat;
+  margin-right: 15px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.cards-choose {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards__choose-cards--choose-namecard {
+  color: #ffffff;
+  font-family: "Inter";
+  font-size: 50px;
+}
+
+.cards__choose-cards--choose-balancetwo {
+  color: #ffffff;
+  font-family: "Inter";
+  font-size: 30px;
+}
+
+.cards__choose-deletecard {
+  margin-top: 12px;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  text-decoration: none;
+  user-select: none;
+  padding: 0.2em 1em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.cards__choose-cards--choose {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards__choose-deletecard:hover {
+  background: rgba(252, 0, 0, 0.2);
+}
+.cards__choose-deletecard:active {
+  background: white;
+}

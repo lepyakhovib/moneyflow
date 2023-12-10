@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<link rel="stylesheet" href="/static/wallets.css">
+<main class="cards_choose">
+        <div class="cards_choose-main container">
+            <section class="cards__choose-info">
+                <h1 class="cards__choose-info--h1">Мои кошельки</h1>
+                <a class="cards__choose-info--button" method="POST" href="{% url 'create_wallet' %}" type="button">Создать кошелек</a>
+                
+            </section>
+
+            <section class="cards__choose--list container">
+                {%for wallet in wallets %}
+                <div class="cards__choose-cards">
+                        <div class="cards__choose-cards--choose">
+                          <form class="cards-choose" action="{{ wallet.get_absolute_url }}" >
+                          <button>
+                          <p class="cards__choose-cards--choose-namecard"">{{wallet.name}}</p>
+                          
+                          {% if project.budget_left > 0 %}
+                            
+                            <p class="cards__choose-cards--choose-balancetwo">₽ {{ wallet.budget_left }}</p>
+                          {% elif project.budget_left == 0 %}
+                            <p class="cards__choose-cards--choose-balancetwo">₽ {{ wallet.budget_left }}</p>
+                          {% else %}
+                            <p class="cards__choose-cards--choose-balancetwo">₽ {{ wallet.budget_left }}</p>
+                          </button>
+                          </form>
+                          
+                            <form method="POST">
+                              {% csrf_token %}
+                              <a class="cards__choose-deletecard" href="{% url 'delete_wallet' slug=wallet.slug %}">Удалить карту</a>
+                            </form>
+
+                          {% endif %}
+                        </div>
+                        
+                        
+                </div>   
+                {% endfor %}
+            </section>
+        </div>
+    </main>
+{% endblock %}

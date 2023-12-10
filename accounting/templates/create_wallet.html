@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/create.css">
+<main class="main__cardswindows">
+    
+    <div class="addcard">
+        <!-- code here -->
+        <div class="card">
+            <div class="card-image">	
+            </div>
+            <form class="card-form" method="post">
+                <div class="namecard">
+                    <h1>Создание карты</h1>
+                </div>
+                {% csrf_token %}
+                <div class="input">
+                    <input type="text" name="name" class="input-field" value="" required id="id_name"/>
+                    <label class="input-label">Название карты</label>
+                </div>
+                    <div class="input">
+                    <input type="number" name="balance" max="10000000" step="any" class="input-field" value="" required id="id_balance"/>
+                    <label class="input-label">Баланс</label>
+                </div>
+                <div class="action">
+                    <button class="action-button" type="submit">Создать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

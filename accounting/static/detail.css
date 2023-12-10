@@ -1,0 +1,169 @@
+@import url(./reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moul&display=swap");
+.main__cardswindows {
+    background-color: #121212;
+    padding-top: 120px;
+  }
+  
+  .moneycounter {
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .moneycounter_block {
+    background-color: #262046;
+    padding: 40px 50px 40px 50px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+    width: 350px;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .moneycounter_block p {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+  
+  .container_cardswindows {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+  
+  .container_counter {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+  
+  .counter {
+    margin-top: 100px;
+    display: flex;
+    /* align-content: center; */
+    align-items: center;
+  
+    justify-content: space-between;
+  }
+  
+  .counter_expenses__button-block {
+    margin-left: 230px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .counter_expenses__buttonadd {
+    display: inline-block;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    user-select: none;
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 10px;
+    transition: 0.2s;
+    font-family: "Inter";
+  }
+  
+  .counter_expenses {
+    background-color: #262046;
+  
+    width: 350px;
+    height: 400px;
+    display: flex;
+    /* margin-left: 50px; */
+    flex-direction: column;
+    border-radius: 20px;
+    margin-bottom: 85px;
+  }
+  
+  .counter_expenses__block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #7d5683;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .counter_expenses__block-elements {
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+  }
+  
+  .counter_expenses__block-main {
+    height: 400px; /* высота нашего блока */
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .counter_expenses__block-main::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
+  .moneycounter_card {
+    background-color: #262046;
+    padding: 50px 100px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+  
+  .moneycounter_card-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .moneycounter_button {
+    display: inline-block;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    user-select: none;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 10px;
+    transition: 0.2s;
+    font-family: "Inter";
+  }
+  
+  .moneycounter_button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .moneycounter_button:active {
+    background: white;
+  }
+  
+  .graph1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
