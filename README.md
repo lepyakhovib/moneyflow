@@ -1,2 +1,2 @@
-# MoneyFlow
- 
+# MoneyFlow - budget manager
+  
